@@ -7,6 +7,8 @@ if [[ -z "$HOME/.config/vesktop" ]]; then
     mkdir "$HOME/pic"
 fi
 
+stow shared -t ~
+
 case $1 in
     cyberia) stow cyberia -t ~;;
     fluoruide) stow fluoride -t ~;;
