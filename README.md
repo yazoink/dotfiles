@@ -2,7 +2,7 @@
 Assuming base Arch/Artix install with graphics drivers
 - `$ sudo pacman -S stow git`
 - `$ git clone https://github.com/yazoink/dotfiles && mv dotfiles ~/.dotfiles && cd ~/.dotfiles`
-- `./install.sh cyberia` or `./install.sh fluoride` or `./install.sh shared`
+- `./install.sh cyberia` or `./install.sh fluoride`
 
 ## Differences between options
 ### cyberia
@@ -17,8 +17,6 @@ Assuming base Arch/Artix install with graphics drivers
 - no volume keys in DWM in favor of using hardware controls
 - built for Arch with systemd
 - status bar is a shell script without volume or battery modules
-
-`./install.sh shared` will only symlink the files shared between cyberia and fluoride.
 
 ## How to make neovim work
 - `$ cd ~/.dotfiles/nvim/.config/nvim/lua`
