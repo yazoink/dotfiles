@@ -1,4 +1,5 @@
 ## Install
+Assuming base Arch/Artix install with graphics drivers
 - `$ sudo pacman -S stow git`
 - `$ git clone https://github.com/yazoink/dotfiles && mv dotfiles ~/.dotfiles && cd ~/.dotfiles`
 - `./install.sh cyberia` or `./install.sh fluoride` or `./install.sh shared`
@@ -9,6 +10,7 @@
 - support for the classic ThinkPad volume keys in DWM
 - built for Artix with the runit init system
 - dwmblocks status bar with volume and battery modules
+- low battery notification script
 
 ### fluoride
 - size 14 font to suit a 1440p monitor
@@ -20,7 +22,7 @@
 
 ## Packages, etc.
 ### Arch repo packages
-- `$ sudo pacman -S polkit-gnome alacritty dunst picom libnotify mpc mpd ncmpcpp mpv neovim qt5ct qt6ct ranger ueberzug rofi zathura zathuta-cb zathura-djvu zathura-pdf-mupdf zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting slock ttf-cascadia-code otf-font-awesome ttf-cascadia-code-nerd ttf-cascadia-code lxappearance hsetroot`
+- `$ sudo pacman -S polkit-gnome alacritty dunst picom libnotify mpc mpd ncmpcpp mpv neovim qt5ct qt6ct ranger ueberzug rofi zathura zathura-cb zathura-djvu zathura-pdf-mupdf zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting slock ttf-cascadia-code ttf-cascadia-code-nerd ttf-cascadia-code lxappearance hsetroot`
 
 ### AUR packages
 - `$ aurget -i jamesdsp-git nvim-packer-git vesktop-bin floorp-bin bettergruvbox-gtk-theme gruvbox-plus-icon-theme-git qt5-styleplugins`
