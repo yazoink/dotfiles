@@ -3,9 +3,6 @@
 - `$ git clone https://github.com/yazoink/dotfiles && mv dotfiles ~/.dotfiles && cd ~/.dotfiles`
 - `./install.sh cyberia` or `./install.sh fluoride` or `./install.sh shared`
 
-### Disclaimer
-the installer is quite aggresive with renaming directories and such. If you're not me, make sure you read through the script before running it.
-
 ## Differences between options
 ### cyberia
 - size 12 font, optimal for smaller resolutions
@@ -43,7 +40,6 @@ the installer is quite aggresive with renaming directories and such. If you're n
 - `$ sudo make clean install`
 
 ### slock
-if you're not me, change the user variable in 'config.h'
 - `$ cd ~/.config/slock`
 - `$ sudo make clean install`
 
