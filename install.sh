@@ -10,7 +10,7 @@ fi
 case $1 in
     cyberia) stow cyberia -t ~;;
     fluoruide) stow fluoride -t ~;;
-    *) printf "usage: ./install.sh <option>\noptions:\n\tcyberia - laptop setup (ThinkPad T430 1600x900)\n\tfluoride - desktop setup (1440p)\n";;
+    *) printf "usage: ./install.sh <option>\noptions:\n\tcyberia - laptop setup (ThinkPad T430 - 1600x900 - Artix runit)\n\tfluoride - desktop setup (1440p - Arch)\n";;
 esac
 
 stow shared -t ~
