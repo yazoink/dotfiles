@@ -21,20 +21,26 @@ stow_dir() {
 usage() {
     printf "usage: ./install.sh <option>
     options:
+    \tshared - files shared between setups
     \tcyberia - laptop setup (ThinkPad T430 - 1600x900 - Artix runit)
     \tfluoride - desktop setup (1440p - Arch)\n"
     exit 1
 }
 
-if [[ "$1" != "cyberia" ]] && [[ "$1" != "fluoride" ]]; then
+if [[ -d "$1" ]]; then
+    create_missing_dir "$HOME/.config/vesktop"
+    create_missing_dir "$HOME/.config/jamesdsp"
+    create_missing_dir "$HOME/pic"
+
+    stow_dir "shared"
+
+    if [[ "$1" != "shared" ]]; then
+        stow_dir "$1"
+    fi
+
+    printf "done!\n"
+    exit 0
+else
     usage
 fi
 
-create_missing_dir "$HOME/.config/vesktop"
-create_missing_dir "$HOME/.config/jamesdsp"
-create_missing_dir "$HOME/pic"
-
-stow_dir "$1"
-stow_dir "shared"
-printf "done!\n"
-exit 0
