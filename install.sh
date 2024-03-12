@@ -7,10 +7,10 @@ if [[ -z "$HOME/.config/vesktop" ]]; then
     mkdir "$HOME/pic"
 fi
 
-stow shared -t ~
-
 case $1 in
     cyberia) stow cyberia -t ~;;
     fluoruide) stow fluoride -t ~;;
     *) printf "usage: ./install.sh <option>\noptions:\n\tcyberia - laptop setup (ThinkPad T430 1600x900)\n\tfluoride - desktop setup (1440p)\n";;
 esac
+
+stow shared -t ~
