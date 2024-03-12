@@ -5,7 +5,7 @@
 
 ### Packages, etc.
 #### Arch repo packages
-- `$ sudo pacman -S polkit-gnome alacritty dunst libnotify mpc mpd ncmpcpp mpv neovim qt5ct qt6ct ranger ueberzug rofi zathura zathuta-cb zathura-djvu zathura-pdf-mupdf zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting slock ttf-cascadia-code otf-font-awesome ttf-cascadia-code-nerd ttf-cascadia-code lxappearance hsetroot`
+- `$ sudo pacman -S polkit-gnome alacritty dunst picom libnotify mpc mpd ncmpcpp mpv neovim qt5ct qt6ct ranger ueberzug rofi zathura zathuta-cb zathura-djvu zathura-pdf-mupdf zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting slock ttf-cascadia-code otf-font-awesome ttf-cascadia-code-nerd ttf-cascadia-code lxappearance hsetroot`
 
 #### AUR packages
 - `$ aurget -i jamesdsp-git nvim-packer-git vesktop-bin floorp-bin bettergruvbox-gtk-theme gruvbox-plus-icon-theme-git qt5-styleplugins`
