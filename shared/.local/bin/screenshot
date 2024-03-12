@@ -1,6 +1,6 @@
 #!/bin/bash
-dir='/home/gene/pic/screenshots'
-output='/home/gene/pic/screenshots/%Y-%m-%d-%T-screenshot.png'
+dir="$HOME/gene/pic/screenshots"
+output="$HOME/pic/screenshots/%Y-%m-%d-%T-screenshot.png"
 
 case "$1" in
   "select") scrot "$output" --select --line mode=edge || exit ;;
