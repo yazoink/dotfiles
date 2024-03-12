@@ -1,0 +1,29 @@
+#!/bin/bash
+
+usage() {
+    printf "usage: rec <option> [output]\noptions:\n"
+    printf "\t-d | --desktop-audio: record screen with desktop audio\n"
+    printf "\t-m | --microphone-audio: record screen with microphone audio\n"
+    printf "\t-n | --no-audio: record screen without audio\n"
+    exit 0
+}
+
+main () {
+    if [[ $# -gt 2 ]]; then
+        usage
+    elif [[ $# -eq 2 ]]; then
+        out_file="$2"
+    else
+        out_file="out.mkv"
+    fi
+
+    case "$1" in
+        -d | --desktop-audio) ffmpeg -f x11grab -i :0.0 -f pulse -i alsa_output.pci-0000_00_1b.0.analog-stereo.monitor -ac 2 "$out_file";;
+        -m | --microphone-audio) ffmpeg -f x11grab -i :0.0 -f alsa -i default -c:a aac -c:v libx264 -crf 18 "$out_file";;
+        -n | --no-audio) ffmpeg -f x11grab -i :0.0 -an "$out_file";;
+        *) usage;;
+    esac
+    exit 0
+}
+
+main "$@"

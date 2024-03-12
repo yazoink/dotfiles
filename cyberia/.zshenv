@@ -1,0 +1,13 @@
+export PATH="$HOME/.local/bin:$PATH"
+export EDITOR="nvim"
+export BROWSER="floorp"
+export TERMINAL="kitty"
+export TERMINAL_PROG="kitty"
+export XDG_CONFIG_HOME="$HOME/.config"
+export XDG_DATA_HOME="$HOME/.local/share"
+export XDG_CACHE_HOME="$HOME/.cache"
+export QT_QPA_PLATFORMTHEME="qt5ct"
+export XCURSOR_SIZE=24
+export _JAVA_AWT_WM_NONREPARENTING=1
+export WINIT_X11_SCALE_FACTOR=1
+export KRITA_NO_STYLE_OVERRIDE=ON

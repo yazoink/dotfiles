@@ -1,0 +1,18 @@
+#!/bin/bash
+
+while true; do
+  # Get the current time and date
+  datetime=$(date +"%a %b %d %I:%M %p")
+
+  # Get the current RAM usage
+  ram=$(free -h | awk '/^Mem:/ {print $3 "/" $2}')
+
+  # Get the current CPU usage
+  cpu=$(top -bn1 | awk '/Cpu/ {printf("%d%%", $2 + $4)}')
+
+  # Set the status bar text using xsetroot
+  xsetroot -name " [RAM: $ram] [CPU: $cpu] [$datetime] "
+
+  # Wait for some time before updating the status bar again
+  sleep 5
+done

@@ -1,0 +1,15 @@
+#!/bin/bash
+#
+vol=$(amixer | grep -m 1 "Front Left:" | awk -F'[][%]' '{print $2}')
+
+case "$1" in
+    "updown")
+        notify-send "Volume: $vol%"
+        ;;
+    "toggle")
+        sound=$(amixer | grep -m 1 "Front Left:" | awk -F'[][%]' '{print $5}')
+        case "$sound" in
+            "off") notify-send "Volume: $vol%";;
+            "on") notify-send "Audio muted" ;;
+        esac
+esac

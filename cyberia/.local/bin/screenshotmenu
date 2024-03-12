@@ -1,0 +1,12 @@
+#!/bin/bash
+set -Eeuo pipefail
+
+chosen=$(printf "Whole Screen\nSelect\nCancel" | rofi -dmenu -i)
+
+case "$chosen" in
+  "Whole Screen") screenshot ;;
+  "Select") screenshot "select" ;;
+  "Cancel") exit 0 ;;
+  *) exit 1 ;;
+esac
+

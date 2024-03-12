@@ -1,0 +1,9 @@
+#!/bin/bash
+
+chosen=$(printf "Shutdown\nReboot\nLock" | rofi -dmenu -i)
+
+case "$chosen" in
+    "Shutdown") loginctl poweroff;;
+    "Reboot") loginctl reboot;;
+    "Lock") slock;;
+esac

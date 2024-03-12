@@ -1,0 +1,29 @@
+#!/bin/bash
+
+NOTIF_1_SENT=false
+NOTIF_2_SENT=false
+
+while true; do
+    CRG=$(acpi -b | grep "Battery 0" | grep -o '[0-9]\+%' | tr -d '%')
+    STAT=$(cat /sys/class/power_supply/BAT0/status)
+    if [[ $CRG -gt 15 ]] && [[ $NOTIF_1_SENT == true ]]; then
+        NOTIF_1_SENT=false
+    fi
+    if [[ $CRG -gt 5 ]] && [[ $NOTIF_2_SENT == true ]]; then
+        NOTIF_2_SENT=false
+    fi
+    if [[ $STAT == "Discharging" ]]; then
+        if [[ $CRG -le 15 ]] && [[ $CRG -gt 5 ]]; then
+            if [[ $NOTIF_1_SENT == false ]]; then
+                notify-send "Low Battery"
+                NOTIF_1_SENT=true;
+            fi
+        elif [[ $CRG -le 5 ]]; then
+            if [[ $NOTIF_2_SENT == false ]]; then
+                notify-send "Your laptop is about to die dumbass"
+                NOTIF_2_SENT=true;
+            fi
+        fi
+    fi
+    sleep 30
+done

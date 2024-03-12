@@ -1,0 +1,28 @@
+#!/bin/sh
+
+# Volume icon
+mute=`amixer | grep -m 1 "Front Left:" | awk -F'[][%]' '{print $5}'`
+volume=`amixer | grep -m 1 "Front Left:" | awk -F'[][%]' '{print $2}'`
+if [[ $mute == "off" ]]; then
+	volicon=
+else
+    if [[ $volume -lt 25 ]]; then
+	    	volicon=
+	    elif [[ $volume -lt 75 ]]; then
+		    volicon=
+	    elif [[ $volume -lt 150 ]]; then
+		    volicon=
+	    else
+		    volicon=a
+    fi
+fi
+
+# Wifi icon
+wifistatus=`nmcli device status | grep wifi | awk '{print $3}'`
+if [[ $wifistatus == "connected" ]]; then
+	icon=$volicon""
+else
+	icon=$volicon
+fi	
+
+echo "$icon $volume%"

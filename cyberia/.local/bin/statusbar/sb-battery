@@ -1,0 +1,18 @@
+#!/bin/bash
+
+bat=$(cat /sys/class/power_supply/BAT0/capacity)
+stat=$(cat /sys/class/power_supply/BAT0/status)
+
+if [[ $stat != "Discharging" ]]; then
+    echo " $bat%"
+elif [[ $bat -gt 90 ]]; then
+	echo "  $bat%"
+elif [[ $bat -gt 75  ]]; then
+	echo "  $bat%"
+elif [[ $bat -gt 60  ]]; then
+	echo "  $bat%"
+elif [[ $bat -gt 15  ]]; then
+	echo "  $bat%"
+else
+	echo "  $bat%"
+fi

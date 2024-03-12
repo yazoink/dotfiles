@@ -1,0 +1,6 @@
+[global]
+    font = Cascadia Code 12
+    frame_width = 2
+    frame_color = "#665C54"
+    background = "#282828"
+    foreground = "#ebdbb2"

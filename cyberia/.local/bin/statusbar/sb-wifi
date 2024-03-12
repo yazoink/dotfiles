@@ -1,0 +1,7 @@
+#!/bin/bash
+status=`nmcli device status | grep wifi | awk '{print $3}'`
+if [[ $status == "connected" ]]; then
+	icon=
+fi	
+
+echo $icon
