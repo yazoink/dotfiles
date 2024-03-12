@@ -24,8 +24,12 @@ usage() {
     \tshared - files shared between setups
     \tcyberia - laptop setup (ThinkPad T430 - 1600x900 - Artix runit)
     \tfluoride - desktop setup (1440p - Arch)\n"
-    exit 1
 } 
+
+if [[ "$1" == "-h" ]] || [[ $1 == "--help" ]]; then
+    usage
+    exit 0
+fi
 
 if [[ -d "$1" ]]; then
     declare -A USER_DIRS=(
@@ -59,5 +63,6 @@ if [[ -d "$1" ]]; then
     exit 0
 else
     usage
+    exit 1
 fi
 
