@@ -3,6 +3,19 @@
 - `$ git clone https://github.com/yazoink/dotfiles && mv dotfiles ~/.dotfiles && cd ~/.dotfiles`
 - `./install.sh cyberia` or `./install.sh fluoride`
 
+### Differences between cyberia and fluoride
+#### cyberia
+- size 12 font, optimal for smaller resolutions
+- support for the classic ThinkPad volume keys in DWM
+- built for Artix with the runit init system
+- dwmblocks status bar with volume and battery modules
+
+#### fluoride
+- size 14 font to suit a 1440p monitor
+- no volume keys in DWM in favor of using hardware controls
+- built for Arch with systemd
+- status bar is a shell script without volume or battery modules
+
 ### Packages, etc.
 #### Arch repo packages
 - `$ sudo pacman -S polkit-gnome alacritty dunst picom libnotify mpc mpd ncmpcpp mpv neovim qt5ct qt6ct ranger ueberzug rofi zathura zathuta-cb zathura-djvu zathura-pdf-mupdf zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting slock ttf-cascadia-code otf-font-awesome ttf-cascadia-code-nerd ttf-cascadia-code lxappearance hsetroot`
