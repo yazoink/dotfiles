@@ -4,7 +4,7 @@ create_missing_dir() {
     if [[ -z "$1" ]]; then
         mkdir -p "$1"
         if [[ $? != 0 ]]; then
-            printf "Installation failed, could not create directory $1. Make sure you have permission to do so.\n"
+            printf "Installation failed, could not create directory %s. Make sure you have permission to do so.\n" "$1"
             exit 1
         fi
     fi
