@@ -25,9 +25,26 @@ usage() {
     \tcyberia - laptop setup (ThinkPad T430 - 1600x900 - Artix runit)
     \tfluoride - desktop setup (1440p - Arch)\n"
     exit 1
-}
+} 
 
 if [[ -d "$1" ]]; then
+    declare -A USER_DIRS=(
+        [Desktop]=desk
+        [Downloads]=dl
+        [Templates]=tmpl
+        [Public]=pub
+        [Documents]=doc
+        [Music]=mu
+        [Pictures]=pic
+        [Videos]=vid
+    )
+
+    for KEY in "${!USER_DIRS[@]}"; do
+        if [[ -d "$HOME/$KEY" ]]; then
+            mv "$HOME/$KEY" "$HOME/${USER_DIRS[$KEY]}"
+        fi
+    done
+
     create_missing_dir "$HOME/.config/vesktop"
     create_missing_dir "$HOME/.config/jamesdsp"
     create_missing_dir "$HOME/pic"
