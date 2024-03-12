@@ -31,7 +31,6 @@ stow_dir() {
 usage() {
     printf "usage: ./install.sh <option>
     options:
-    \tshared - files shared between setups
     \tcyberia - laptop setup (ThinkPad T430 - 1600x900 - Artix runit)
     \tfluoride - desktop setup (1440p - Arch)\n"
 } 
@@ -41,7 +40,7 @@ if [[ "$1" == "-h" ]] || [[ "$1" == "--help" ]]; then
     exit 0
 fi
 
-if [[ -d "$1" ]]; then
+if [[ -d "$1" ]] && [[ "$1" != "shared" ]]; then
     declare -A USER_DIRS=(
         [Desktop]=desk
         [Downloads]=dl
@@ -64,10 +63,7 @@ if [[ -d "$1" ]]; then
     create_missing_dir "$HOME/pic"
 
     stow_dir "shared"
-
-    if [[ "$1" != "shared" ]]; then
-        stow_dir "$1"
-    fi
+    stow_dir "$1"
 
     prompt "Compile suckless builds?"
     if [[ $? == 0 ]]; then
