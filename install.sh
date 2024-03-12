@@ -2,8 +2,7 @@
 
 create_missing_dir() {
     if [[ -z "$1" ]]; then
-        mkdir -p "$1"
-        if [[ $? != 0 ]]; then
+        if ! mkdir -p "$1"; then
             printf "Installation failed, could not create directory %s. Make sure you have permission to do so.\n" "$1"
             exit 1
         fi
@@ -11,8 +10,7 @@ create_missing_dir() {
 }
 
 stow_dir() {
-    stow "$1" -t ~
-    if [[ $? != 0 ]]; then
+    if ! stow "$1" -t ~; then
         printf "Installation failed, could not stow %s. Check for any conflicting files.\n" "$1"
         exit 1
     fi
