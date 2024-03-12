@@ -3,7 +3,8 @@
 - `$ git clone https://github.com/yazoink/dotfiles && mv dotfiles ~/.dotfiles && cd ~/.dotfiles`
 - `./install.sh cyberia` or `./install.sh fluoride` or `./install.sh shared`
 
-Disclaimer: the installer is quite aggresive with renaming directories and such. If you're not me, make sure you read through the script before running it.
+#### Disclaimer
+the installer is quite aggresive with renaming directories and such. If you're not me, make sure you read through the script before running it.
 
 ### Differences between options
 #### cyberia
