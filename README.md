@@ -1,9 +1,9 @@
 ### Install
 - `$ sudo pacman -S stow git`
 - `$ git clone https://github.com/yazoink/dotfiles && mv dotfiles ~/.dotfiles && cd ~/.dotfiles`
-- `./install.sh cyberia` or `./install.sh fluoride`
+- `./install.sh cyberia` or `./install.sh fluoride` or `./install.sh shared`
 
-### Differences between cyberia and fluoride
+### Differences between options
 #### cyberia
 - size 12 font, optimal for smaller resolutions
 - support for the classic ThinkPad volume keys in DWM
@@ -15,6 +15,8 @@
 - no volume keys in DWM in favor of using hardware controls
 - built for Arch with systemd
 - status bar is a shell script without volume or battery modules
+
+`./install.sh shared` will only symlink the files shared between cyberia and fluoride.
 
 ### Packages, etc.
 #### Arch repo packages
