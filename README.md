@@ -20,32 +20,7 @@ Assuming base Arch/Artix install with graphics drivers
 
 `./install.sh shared` will only symlink the files shared between cyberia and fluoride.
 
-## Packages, etc.
-### Arch repo packages
-- `$ sudo pacman -S polkit-gnome alacritty dunst picom libnotify mpc mpd ncmpcpp mpv neovim qt5ct qt6ct ranger ueberzug rofi zathura zathura-cb zathura-djvu zathura-pdf-mupdf zsh zsh-autosuggestions zsh-completions zsh-syntax-highlighting slock ttf-cascadia-code ttf-cascadia-code-nerd ttf-cascadia-code lxappearance hsetroot`
-
-### AUR packages
-- `$ aurget -i jamesdsp-git nvim-packer-git vesktop-bin floorp-bin bettergruvbox-gtk-theme gruvbox-plus-icon-theme-git qt5-styleplugins`
-
-### Change shell
-- `$ chsh -s $(which zsh)`
-- log out and in again
-
-## Install suckless builds
-### DWM
-- `$ sudo pacman -S xorg-server xorg-xsetroot xorg-xrandr xorg-xinit libx11 libxft` (plus whatever drivers are needed)
-- `$ cd ~/.config/dwm`
-- `$ sudo make clean install`
-
-### dwmblocks \(cyberia only\)
-- `$ cd ~/.config/dwmblocks`
-- `$ sudo make clean install`
-
-### slock
-- `$ cd ~/.config/slock`
-- `$ sudo make clean install`
-
-## Make neovim work
+## How to make neovim work
 - `$ cd ~/.dotfiles/nvim/.config/nvim/lua`
 - `$ vim plugins.lua`
 - `:PackerSync`
