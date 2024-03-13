@@ -93,7 +93,7 @@ if [[ -d "$1" ]] && [[ "$1" != "shared" ]]; then
     fi
     
     ADDITIONAL_PKGS_MAIN=("mpv" "neovim" "vim" "zathura" "zathura-cb" "zathura-djvu" "zathura-pdf-mupdf" "signal-desktop" "gimp" "pcmanfm" "gvfs" "udisks2" "udiskie" "imv" "yt-dlp" "ffmpeg" "audacity" "nicotine+" "galculator" "keepassxc" "htop" "fastfetch" "texlive-meta" "thunderbird")
-    ADDITIONAL_PKGS_AUR=("floorp-bin" "vesktop-bin" "jamesdsp-git" "qbittorrent-enhanced-qt5")
+    ADDITIONAL_PKGS_AUR=("vesktop-bin" "jamesdsp-git" "qbittorrent-enhanced-qt5")
     
     printf "\n$(echo ${ADDITIONAL_PKGS_MAIN[@]} ${ADDITIONAL_PKGS_AUR[@]})\n\n"
     prompt "Install additional packages?"
