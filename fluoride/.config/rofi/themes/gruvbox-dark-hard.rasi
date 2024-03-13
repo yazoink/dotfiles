@@ -15,7 +15,7 @@
     /* Theme settings */
     highlight: 	bold italic;
     scrollbar: 	true;
-    font: 	"Cascadia Code 14";
+    font: 	"Cascadia Code 16";
 
     /* Gruvbox dark colors */
     gruvbox-dark-bg0-hard:     #1d2021;

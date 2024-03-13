@@ -13,7 +13,7 @@ Assuming base Arch/Artix install with graphics drivers
 - low battery notification script
 
 ### fluoride
-- size 14 font to suit a 1440p monitor
+- size 16 font to suit a 1440p monitor
 - no volume keys in DWM in favor of using hardware controls
 - built for Arch with systemd
 - status bar is a shell script without volume or battery modules
